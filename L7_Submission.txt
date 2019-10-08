@@ -1,0 +1,20 @@
+1. What is the #line directive? Give an example where the directive might be useful.
+The line directive is used to change the line counter to a new value. This might be useful when you're writing code that will generate a specification. You want to report errors at the location that they occur in the source code, not the generated code.
+
+2. What are the __LINE__ and __FILE__ macros? Give an example of how they might be useful.
+These macros give information about the current line or current file, respectively. They would both be very useful for printing informative error messages.
+
+3. Give an example of a preprocessor macro that you define that takes an argument. Typically, the use of such macros is discouraged. Why might that be?
+An example of a preprocessor macro might be
+#define SUB(a,b) a-b
+
+Parametrized macros might be discouraged because, in some cases, they make code convoluted and confusing without providing any real benefit.
+
+4. What is the command-line option to make g++ print the preprocessed output to standard out?
+The flag -E will cause g++ to print the preprocessed output.
+
+5. Describe what the # operator does by explaining the output of the following program (q5.cpp):
+It seems to convert the variable x to a string.
+
+6. What is the command-line option to make g++ compile the following program (q6.cpp) so that it prints "bye" to std::cerr when run?
+Adding "-DVERBOSE=true" will cause the program to print "bye" to std::err.
